@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Globe, ChevronDown } from 'lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+import profilePhoto from '@/assets/profile-photo.jpg';
 
 const socialLinks = [
   { icon: Mail, href: 'mailto:amar@iiitnr.edu.in', label: 'Email' },
@@ -44,7 +45,7 @@ export const Hero = () => {
             >
               <Avatar className="w-32 h-32 md:w-40 md:h-40 mx-auto ring-4 ring-primary/30 ring-offset-4 ring-offset-background shadow-glow">
                 <AvatarImage 
-                  src="/profile-photo.jpg" 
+                  src={profilePhoto} 
                   alt="Amar Sinha" 
                   className="object-cover"
                 />
