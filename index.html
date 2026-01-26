@@ -1,36 +1,2039 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Amar Sinha | B5G Networks & AI/ML Researcher</title>
+  <meta name="description" content="Amar Sinha - Ph.D. researcher specializing in Beyond 5G Networks, Software-Defined Networking, and AI-driven solutions for next-generation wireless communication." />
+  <meta name="keywords" content="Amar Sinha, B5G, 5G, 6G, SDN, AI/ML, wireless networks, research, IIIT Naya Raipur, PhD" />
+  <meta name="author" content="Amar Sinha" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Amar Sinha | B5G Networks & AI/ML Researcher" />
+  <meta property="og:description" content="Ph.D. researcher specializing in Beyond 5G Networks, Software-Defined Networking, and AI-driven solutions." />
+  <meta property="og:url" content="https://www.amarsinha.in" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Amar Sinha | B5G Networks & AI/ML Researcher" />
+  <meta name="twitter:description" content="Ph.D. researcher specializing in Beyond 5G Networks, Software-Defined Networking, and AI-driven solutions." />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.amarsinha.in" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* CSS Variables - Dark Theme */
+    :root {
+      --background: hsl(222 47% 6%);
+      --foreground: hsl(210 40% 96%);
+      --card: hsl(222 47% 8%);
+      --card-foreground: hsl(210 40% 96%);
+      --primary: hsl(192 91% 50%);
+      --primary-foreground: hsl(222 47% 6%);
+      --secondary: hsl(217 32% 18%);
+      --secondary-foreground: hsl(210 40% 90%);
+      --muted: hsl(217 32% 14%);
+      --muted-foreground: hsl(215 20% 60%);
+      --accent: hsl(192 91% 50%);
+      --border: hsl(217 32% 18%);
+      --radius: 0.75rem;
+      --gradient-primary: linear-gradient(135deg, hsl(192 91% 50%), hsl(210 100% 60%));
+      --gradient-hero: linear-gradient(180deg, hsl(222 47% 8%) 0%, hsl(222 47% 4%) 100%);
+      --gradient-glow: radial-gradient(ellipse at center, hsl(192 91% 50% / 0.15), transparent 70%);
+      --shadow-glow: 0 0 40px hsl(192 91% 50% / 0.2);
+      --shadow-card: 0 10px 40px -10px hsl(222 47% 2% / 0.5);
+      --shadow-hover: 0 20px 50px -15px hsl(192 91% 50% / 0.25);
+    }
+
+    /* Light Theme */
+    .light {
+      --background: hsl(210 40% 98%);
+      --foreground: hsl(222 47% 11%);
+      --card: hsl(0 0% 100%);
+      --card-foreground: hsl(222 47% 11%);
+      --primary: hsl(192 91% 36%);
+      --primary-foreground: hsl(210 40% 98%);
+      --secondary: hsl(210 40% 94%);
+      --secondary-foreground: hsl(222 47% 11%);
+      --muted: hsl(210 40% 94%);
+      --muted-foreground: hsl(215 20% 45%);
+      --accent: hsl(192 91% 36%);
+      --border: hsl(214 32% 88%);
+      --gradient-primary: linear-gradient(135deg, hsl(192 91% 36%), hsl(210 100% 50%));
+      --gradient-hero: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(210 40% 94%) 100%);
+      --gradient-glow: radial-gradient(ellipse at center, hsl(192 91% 36% / 0.1), transparent 70%);
+      --shadow-glow: 0 0 40px hsl(192 91% 36% / 0.15);
+      --shadow-card: 0 10px 40px -10px hsl(222 47% 11% / 0.1);
+      --shadow-hover: 0 20px 50px -15px hsl(192 91% 36% / 0.2);
+    }
+
+    /* Reset & Base Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Utility Classes */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-padding {
+      padding: 5rem 0;
+    }
+
+    @media (min-width: 768px) {
+      .section-padding {
+        padding: 7rem 0;
+      }
+    }
+
+    .text-gradient {
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .glass {
+      backdrop-filter: blur(16px);
+      background: hsl(222 47% 8% / 0.4);
+      border: 1px solid hsl(217 32% 18% / 0.5);
+    }
+
+    .light .glass {
+      background: hsl(0 0% 100% / 0.7);
+      border: 1px solid hsl(214 32% 88% / 0.5);
+    }
+
+    .text-primary { color: var(--primary); }
+    .text-muted { color: var(--muted-foreground); }
+    .bg-card { background-color: var(--card); }
+
+    /* Grid System */
+    .grid { display: grid; gap: 1.5rem; }
+    .grid-2 { grid-template-columns: repeat(1, 1fr); }
+    .grid-3 { grid-template-columns: repeat(1, 1fr); }
+
+    @media (min-width: 768px) {
+      .grid-2 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      padding: 1rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      backdrop-filter: blur(16px);
+      background: hsl(222 47% 8% / 0.8);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    }
+
+    .light .navbar.scrolled {
+      background: hsl(0 0% 100% / 0.8);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .nav-links { display: flex; }
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      background: var(--primary);
+      color: var(--primary-foreground);
+      border-radius: 0.5rem;
+      transition: opacity 0.3s;
+    }
+
+    .nav-btn:hover {
+      opacity: 0.9;
+    }
+
+    .theme-toggle {
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      background: var(--secondary);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background: var(--muted);
+    }
+
+    .theme-toggle svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      color: var(--foreground);
+    }
+
+    .sun-icon { display: block; }
+    .moon-icon { display: none; }
+    .light .sun-icon { display: none; }
+    .light .moon-icon { display: block; }
+
+    .mobile-menu-btn {
+      display: flex;
+      padding: 0.5rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .mobile-menu-btn svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: var(--foreground);
+    }
+
+    @media (min-width: 768px) {
+      .mobile-menu-btn { display: none; }
+    }
+
+    .mobile-menu {
+      display: none;
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .mobile-menu.active {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .mobile-menu a {
+      padding: 0.5rem 0;
+      color: var(--foreground);
+      transition: color 0.3s;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--primary);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-hero);
+      position: relative;
+      overflow: hidden;
+      padding-top: 4rem;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(hsl(217 32% 18% / 0.3) 1px, transparent 1px),
+                        linear-gradient(90deg, hsl(217 32% 18% / 0.3) 1px, transparent 1px);
+      background-size: 60px 60px;
+      opacity: 0.3;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 800px;
+      background: var(--gradient-glow);
+      animation: glow-pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes glow-pulse {
+      0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+      50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 900px;
+      text-align: center;
+    }
+
+    .hero-avatar {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      object-fit: cover;
+      border: 4px solid hsl(192 91% 50% / 0.3);
+      box-shadow: var(--shadow-glow);
+    }
+
+    @media (min-width: 768px) {
+      .hero-avatar {
+        width: 160px;
+        height: 160px;
+      }
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      color: var(--primary);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero h1 { font-size: 3.5rem; }
+    }
+
+    @media (min-width: 1024px) {
+      .hero h1 { font-size: 4.5rem; }
+    }
+
+    .hero-description {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .social-link {
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      transition: all 0.3s;
+    }
+
+    .social-link:hover {
+      background: hsl(192 91% 50% / 0.1);
+      transform: translateY(-5px);
+    }
+
+    .social-link svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      color: var(--muted-foreground);
+      transition: color 0.3s;
+    }
+
+    .social-link:hover svg {
+      color: var(--primary);
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .hero-buttons { flex-direction: row; justify-content: center; }
+    }
+
+    .btn-primary {
+      padding: 1rem 2rem;
+      font-weight: 500;
+      background: var(--primary);
+      color: var(--primary-foreground);
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow-glow);
+      transition: opacity 0.3s;
+    }
+
+    .btn-primary:hover { opacity: 0.9; }
+
+    .btn-secondary {
+      padding: 1rem 2rem;
+      font-weight: 500;
+      border-radius: 0.75rem;
+      transition: background 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background: var(--secondary);
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--muted-foreground);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+    }
+
+    .scroll-indicator span {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--primary);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-top: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .section-title { font-size: 2.5rem; }
+    }
+
+    @media (min-width: 1024px) {
+      .section-title { font-size: 3rem; }
+    }
+
+    .section-description {
+      color: var(--muted-foreground);
+      max-width: 700px;
+      margin: 1rem auto 0;
+    }
+
+    /* Card Styles */
+    .card {
+      padding: 1.5rem;
+      border-radius: 1rem;
+      transition: all 0.3s;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-5px);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 0.75rem;
+      background: hsl(192 91% 50% / 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      transition: background 0.3s;
+    }
+
+    .card:hover .card-icon {
+      background: hsl(192 91% 50% / 0.2);
+    }
+
+    .card-icon svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: var(--primary);
+    }
+
+    /* About Section */
+    .about-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gradient-glow);
+      opacity: 0.3;
+    }
+
+    .about-grid {
+      display: grid;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .about-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .about-text p {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text strong {
+      color: var(--foreground);
+      font-weight: 500;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      padding-top: 1rem;
+    }
+
+    .tag {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      border-radius: 9999px;
+      color: var(--primary);
+      border: 1px solid hsl(192 91% 50% / 0.2);
+    }
+
+    .stat-card {
+      padding: 1.5rem;
+      border-radius: 1rem;
+      transition: all 0.3s;
+    }
+
+    .stat-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-5px);
+    }
+
+    .stat-value {
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: var(--foreground);
+    }
+
+    .stat-label {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+    }
+
+    /* Experience Section */
+    .experience-section {
+      background: hsl(222 47% 8% / 0.3);
+    }
+
+    .light .experience-section {
+      background: hsl(210 40% 94% / 0.3);
+    }
+
+    .exp-column-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .exp-column-header h3 {
+      font-size: 1.25rem;
+    }
+
+    .timeline {
+      position: relative;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 2rem;
+      padding-bottom: 2rem;
+      border-left: 2px solid var(--border);
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      transform: translateX(-9px);
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .timeline-dot.secondary {
+      background: var(--secondary);
+      border: 2px solid var(--primary);
+    }
+
+    .timeline-content {
+      padding: 1.5rem;
+      border-radius: 1rem;
+      transition: all 0.3s;
+    }
+
+    .timeline-content:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .timeline-period {
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+    }
+
+    .timeline-title {
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .timeline-org {
+      color: var(--muted-foreground);
+      margin-top: 0.25rem;
+    }
+
+    .timeline-location {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      opacity: 0.7;
+    }
+
+    .timeline-points {
+      margin-top: 1rem;
+      list-style: none;
+    }
+
+    .timeline-points li {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-points li::before {
+      content: '▹';
+      color: var(--primary);
+      margin-top: 2px;
+    }
+
+    .course-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .course-tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+      background: var(--secondary);
+      color: var(--muted-foreground);
+    }
+
+    /* Publications Section */
+    .pub-category {
+      margin-bottom: 3rem;
+    }
+
+    .pub-category-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pub-category-header h3 {
+      font-size: 1.25rem;
+    }
+
+    .pub-card {
+      padding: 1.5rem;
+      border-radius: 1rem;
+      transition: all 0.3s;
+    }
+
+    .pub-card:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .pub-card h4 {
+      font-weight: 600;
+      color: var(--foreground);
+      line-height: 1.4;
+      transition: color 0.3s;
+    }
+
+    .pub-card:hover h4 {
+      color: var(--primary);
+    }
+
+    .pub-authors {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      margin-top: 0.5rem;
+    }
+
+    .pub-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+    }
+
+    .pub-venue {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      background: hsl(192 91% 50% / 0.1);
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    .pub-year {
+      font-size: 0.75rem;
+      color: var(--muted-foreground);
+    }
+
+    .pub-status {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.25rem;
+    }
+
+    .pub-status.published {
+      background: hsl(142 76% 36% / 0.1);
+      color: hsl(142 76% 56%);
+    }
+
+    .pub-status.communicated {
+      background: hsl(45 93% 47% / 0.1);
+      color: hsl(45 93% 57%);
+    }
+
+    .scholar-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.75rem;
+      color: var(--primary);
+      transition: background 0.3s;
+    }
+
+    .scholar-link:hover {
+      background: hsl(192 91% 50% / 0.1);
+    }
+
+    /* Skills Section */
+    .skills-section {
+      background: hsl(222 47% 8% / 0.3);
+    }
+
+    .light .skills-section {
+      background: hsl(210 40% 94% / 0.3);
+    }
+
+    .skill-card {
+      padding: 1.5rem;
+      border-radius: 1rem;
+      transition: all 0.3s;
+    }
+
+    .skill-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-5px);
+    }
+
+    .skill-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      transition: transform 0.3s;
+    }
+
+    .skill-card:hover .skill-icon {
+      transform: scale(1.1);
+    }
+
+    .skill-icon svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: white;
+    }
+
+    .skill-icon.cyan { background: linear-gradient(135deg, hsl(188 78% 52%), hsl(199 89% 52%)); }
+    .skill-icon.purple { background: linear-gradient(135deg, hsl(271 76% 53%), hsl(330 81% 58%)); }
+    .skill-icon.green { background: linear-gradient(135deg, hsl(142 71% 45%), hsl(160 84% 40%)); }
+    .skill-icon.orange { background: linear-gradient(135deg, hsl(25 95% 53%), hsl(48 96% 53%)); }
+    .skill-icon.blue { background: linear-gradient(135deg, hsl(217 91% 60%), hsl(263 90% 51%)); }
+    .skill-icon.red { background: linear-gradient(135deg, hsl(0 84% 60%), hsl(330 81% 60%)); }
+
+    .skill-title {
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      font-size: 0.75rem;
+      padding: 0.375rem 0.75rem;
+      border-radius: 9999px;
+      background: var(--secondary);
+      color: var(--muted-foreground);
+      transition: all 0.3s;
+    }
+
+    .skill-tag:hover {
+      background: hsl(192 91% 50% / 0.1);
+      color: var(--primary);
+    }
+
+    /* Teaching Section */
+    .teaching-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .teaching-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gradient-glow);
+      opacity: 0.2;
+    }
+
+    .teaching-tabs {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .tab-buttons {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 400px;
+      margin: 0 auto 2rem;
+      background: hsl(222 47% 8% / 0.5);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    .light .tab-buttons {
+      background: hsl(210 40% 94% / 0.5);
+    }
+
+    .tab-btn {
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: var(--muted-foreground);
+      transition: all 0.3s;
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: var(--primary-foreground);
+    }
+
+    .tab-btn svg {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .course-card {
+      padding: 1.5rem;
+      border-radius: 1rem;
+      transition: all 0.3s;
+    }
+
+    .course-card:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .course-card-inner {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .course-code {
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+    }
+
+    .course-name {
+      font-size: 1.125rem;
+      margin-top: 0.25rem;
+    }
+
+    .course-desc {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      margin-top: 0.5rem;
+    }
+
+    /* Leadership Section */
+    .leadership-card {
+      padding: 1.5rem;
+      border-radius: 1rem;
+      transition: all 0.3s;
+    }
+
+    .leadership-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-5px);
+    }
+
+    .leadership-period {
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+    }
+
+    .leadership-role {
+      font-size: 1.125rem;
+      margin-top: 0.5rem;
+    }
+
+    .leadership-org {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      margin-top: 0.25rem;
+    }
+
+    .leadership-location {
+      font-size: 0.75rem;
+      color: var(--muted-foreground);
+      opacity: 0.7;
+    }
+
+    .leadership-achievements {
+      margin-top: 1rem;
+      list-style: none;
+    }
+
+    .leadership-achievements li {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .leadership-achievements li::before {
+      content: '▹';
+      color: var(--primary);
+      margin-top: 2px;
+    }
+
+    .memberships-card {
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .memberships-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .memberships-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .membership-tag {
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      border-radius: 9999px;
+      color: var(--muted-foreground);
+      transition: all 0.3s;
+    }
+
+    .membership-tag:hover {
+      color: var(--primary);
+      border-color: hsl(192 91% 50% / 0.3);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background: hsl(222 47% 8% / 0.3);
+    }
+
+    .light .contact-section {
+      background: hsl(210 40% 94% / 0.3);
+    }
+
+    .contact-cards {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .contact-card {
+      padding: 1.5rem;
+      border-radius: 1rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .contact-card:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .contact-label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted-foreground);
+    }
+
+    .contact-value {
+      color: var(--foreground);
+      margin-top: 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .contact-value:hover {
+      color: var(--primary);
+    }
+
+    .contact-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+
+    .contact-social-link {
+      padding: 1rem;
+      border-radius: 0.75rem;
+      transition: all 0.3s;
+    }
+
+    .contact-social-link:hover {
+      background: hsl(192 91% 50% / 0.1);
+      transform: translateY(-5px);
+    }
+
+    .contact-social-link svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: var(--muted-foreground);
+      transition: color 0.3s;
+    }
+
+    .contact-social-link:hover svg {
+      color: var(--primary);
+    }
+
+    /* Footer */
+    .footer {
+      padding: 2rem 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-content { flex-direction: row; }
+    }
+
+    .footer-text {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+    }
+
+    /* SVG Icons */
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">Amar Sinha</a>
+      
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="/AMAR_CV.pdf" target="_blank" class="nav-btn">Resume</a>
+      </div>
+      
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="close-icon" style="display:none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
     
-    <!-- SEO Meta Tags -->
-    <title>Amar Sinha | B5G Networks & AI/ML Researcher</title>
-    <meta name="description" content="Amar Sinha - Ph.D. researcher specializing in Beyond 5G Networks, Software-Defined Networking, and AI-driven solutions for next-generation wireless communication." />
-    <meta name="keywords" content="Amar Sinha, B5G, 5G, 6G, SDN, AI/ML, wireless networks, research, IIIT Naya Raipur, PhD" />
-    <meta name="author" content="Amar Sinha" />
+    <div class="mobile-menu glass" id="mobile-menu">
+      <a href="#about" onclick="closeMobileMenu()">About</a>
+      <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+      <a href="#publications" onclick="closeMobileMenu()">Publications</a>
+      <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+      <a href="#teaching" onclick="closeMobileMenu()">Teaching</a>
+      <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+      <div style="display: flex; align-items: center; gap: 1rem; padding: 0.5rem 0;">
+        <span style="font-size: 0.875rem; color: var(--muted-foreground);">Theme:</span>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+      <a href="/AMAR_CV.pdf" target="_blank" class="nav-btn" style="text-align: center;">Resume</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <img src="/src/assets/profile-photo.jpg" alt="Amar Sinha" class="hero-avatar glass">
+      <div class="hero-badge glass">Ph.D. Researcher • AI/ML Engineer</div>
+      <h1>Hi, I'm <span class="text-gradient">Amar Sinha</span></h1>
+      <p class="hero-description">
+        Innovative researcher specializing in <strong>Beyond 5G Networks</strong>, 
+        <strong>Software-Defined Networking</strong>, and <strong>AI-driven Solutions</strong> 
+        for next-generation wireless communication.
+      </p>
+      
+      <div class="social-links">
+        <a href="mailto:amar@iiitnr.edu.in" class="social-link glass" title="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/amarcrj" target="_blank" class="social-link glass" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/amarcrj" target="_blank" class="social-link glass" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://www.amarsinha.in" target="_blank" class="social-link glass" title="Website">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </a>
+      </div>
+      
+      <div class="hero-buttons">
+        <a href="#publications" class="btn-primary">View Publications</a>
+        <a href="#contact" class="btn-secondary glass">Get in Touch</a>
+      </div>
+    </div>
     
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Amar Sinha | B5G Networks & AI/ML Researcher" />
-    <meta property="og:description" content="Ph.D. researcher specializing in Beyond 5G Networks, Software-Defined Networking, and AI-driven solutions." />
-    <meta property="og:url" content="https://www.amarsinha.in" />
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Amar Sinha | B5G Networks & AI/ML Researcher" />
-    <meta name="twitter:description" content="Ph.D. researcher specializing in Beyond 5G Networks, Software-Defined Networking, and AI-driven solutions." />
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.amarsinha.in" />
-    
-    <!-- Preconnect for fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <a href="#about" class="scroll-indicator">
+      <span>Scroll</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-padding about-section">
+    <div class="container" style="position: relative; z-index: 10;">
+      <div class="section-header">
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">Advancing <span class="text-gradient">Wireless Networks</span></h2>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm an innovative researcher with expertise in <strong>Beyond 5G (B5G)</strong> mobile networks, 
+            <strong>Software-Defined Networking (SDN)</strong>, AI-driven handover decision-making algorithms, 
+            and wireless network simulations.
+          </p>
+          <p>
+            With a proven track record in developing Mininet WiFi-based testbeds, applying learning models 
+            for mobility management, and enhancing overall network performance, I bridge the gap between 
+            theoretical research and practical implementation.
+          </p>
+          <p>
+            Currently pursuing my <strong>Ph.D. at IIIT Naya Raipur</strong>, I'm passionate about pushing 
+            the boundaries of next-generation wireless communication through AI/ML-driven solutions.
+          </p>
+          
+          <div class="tag-list">
+            <span class="tag glass">SDN</span>
+            <span class="tag glass">B5G/6G</span>
+            <span class="tag glass">AI/ML</span>
+            <span class="tag glass">IoT</span>
+            <span class="tag glass">O-RAN</span>
+            <span class="tag glass">Quantum Computing</span>
+          </div>
+        </div>
+        
+        <div class="grid grid-2">
+          <div class="stat-card glass">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <div class="stat-value">6+</div>
+            <div class="stat-label">Publications</div>
+          </div>
+          <div class="stat-card glass">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            </div>
+            <div class="stat-value">1</div>
+            <div class="stat-label">Patents</div>
+          </div>
+          <div class="stat-card glass">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="stat-value">40%</div>
+            <div class="stat-label">IEEE Membership Growth</div>
+          </div>
+          <div class="stat-card glass">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="stat-value">Ph.D.</div>
+            <div class="stat-label">Ongoing Research</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section-padding experience-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Career Journey</span>
+        <h2 class="section-title">Experience & <span class="text-gradient">Education</span></h2>
+      </div>
+      
+      <div class="grid" style="grid-template-columns: 1fr; gap: 3rem;">
+        <!-- Work Experience -->
+        <div>
+          <div class="exp-column-header">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <h3>Work Experience</h3>
+          </div>
+          
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content glass">
+                <span class="timeline-period">September 2025 – Present</span>
+                <h4 class="timeline-title">Assistant Professor</h4>
+                <p class="timeline-org">ITM University, Raipur</p>
+                <p class="timeline-location">School of Engineering and Research, Naya Raipur</p>
+                <ul class="timeline-points">
+                  <li>Delivering UG and PG courses with focus on advanced technologies</li>
+                  <li>Mentoring students in academic projects and research activities</li>
+                  <li>Publishing high-quality research in SCI-indexed journals</li>
+                  <li>Collaborating with industry peers for technology-driven research</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content glass">
+                <span class="timeline-period">August 2022 – August 2025</span>
+                <h4 class="timeline-title">Junior Research Fellow (JRF)</h4>
+                <p class="timeline-org">Dr. Shyama Prasad Mukherjee IIIT Naya Raipur</p>
+                <p class="timeline-location">Funded by IIITB COMET Foundation</p>
+                <ul class="timeline-points">
+                  <li>Designed and implemented algorithms for SDN-enabled B5G networks</li>
+                  <li>Configured experimental testbeds for validating network solutions</li>
+                  <li>Authored research articles for SCI-indexed journals and conferences</li>
+                  <li>Filed patents on communication techniques and optimization frameworks</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Education -->
+        <div>
+          <div class="exp-column-header">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <h3>Education</h3>
+          </div>
+          
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot secondary"></div>
+              <div class="timeline-content glass">
+                <span class="timeline-period">January 2023 – Ongoing</span>
+                <h4 class="timeline-title">Ph.D. in Computer Science and Engineering</h4>
+                <p class="timeline-org">Dr. Shyama Prasad Mukherjee IIIT Naya Raipur</p>
+                <p style="font-size: 0.875rem; color: var(--primary); margin-top: 0.5rem;">CGPA: 8.00</p>
+                <div class="course-tags">
+                  <span class="course-tag">Data Mining and ML</span>
+                  <span class="course-tag">SDN</span>
+                  <span class="course-tag">ML for Communication Networks</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-dot secondary"></div>
+              <div class="timeline-content glass">
+                <span class="timeline-period">September 2020 – August 2022</span>
+                <h4 class="timeline-title">M.Tech. in Computer Science (CPS)</h4>
+                <p class="timeline-org">Central University of Rajasthan</p>
+                <p style="font-size: 0.875rem; color: var(--primary); margin-top: 0.5rem;">CGPA: 7.50</p>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-dot secondary"></div>
+              <div class="timeline-content glass">
+                <span class="timeline-period">August 2017 – July 2020</span>
+                <h4 class="timeline-title">B.Tech. in Computer Science and Engineering</h4>
+                <p class="timeline-org">Asansol Engineering College (M.A.K.A.U.T.)</p>
+                <p style="font-size: 0.875rem; color: var(--primary); margin-top: 0.5rem;">CGPA: 7.17</p>
+              </div>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-dot secondary"></div>
+              <div class="timeline-content glass">
+                <span class="timeline-period">August 2014 – July 2017</span>
+                <h4 class="timeline-title">Diploma in Computer Science and Technology</h4>
+                <p class="timeline-org">ABS Academy of Polytechnic (W.B.S.C.T.V.E.S.D.)</p>
+                <p style="font-size: 0.875rem; color: var(--primary); margin-top: 0.5rem;">CGPA: 8.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications Section -->
+  <section id="publications" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Research Output</span>
+        <h2 class="section-title">Publications & <span class="text-gradient">Patents</span></h2>
+        <p class="section-description">
+          Contributing to the advancement of wireless networks, AI/ML, and quantum computing through peer-reviewed research.
+        </p>
+      </div>
+      
+      <!-- Journal Articles -->
+      <div class="pub-category">
+        <div class="pub-category-header">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <h3>Journal Articles</h3>
+        </div>
+        <div class="grid grid-2">
+          <div class="pub-card glass">
+            <h4>iDecide: Leveraging Deep Learning to Enhance Seamless Handover Decisions in B5G Networks</h4>
+            <p class="pub-authors">A. Sinha, Mallikharjuna Rao K.</p>
+            <div class="pub-meta">
+              <span class="pub-venue">IEEE Networking Letters</span>
+              <span class="pub-year">2025</span>
+              <span class="pub-status communicated">Communicated</span>
+            </div>
+          </div>
+          <div class="pub-card glass">
+            <h4>dGuard: Real-Time Detection of Driver Drowsiness and Stress Using YOLOv12 and Mediapipe</h4>
+            <p class="pub-authors">S. Barik, G. Sahu, S. Verma, A. Sinha, Mallikharjuna Rao K.</p>
+            <div class="pub-meta">
+              <span class="pub-venue">Springer Neuroscience Bulletin</span>
+              <span class="pub-year">2025</span>
+              <span class="pub-status communicated">Communicated</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Conference Papers -->
+      <div class="pub-category">
+        <div class="pub-category-header">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>Conference Papers</h3>
+        </div>
+        <div class="grid grid-2">
+          <div class="pub-card glass">
+            <h4>Liver Disease Classification by Analysing Salient Features of LFT: An Explainable ML Approach</h4>
+            <p class="pub-authors">A. Agrawal, T. Sen, A. Sinha, P. Gangopadhyay</p>
+            <div class="pub-meta">
+              <span class="pub-venue">IEEE IATMSI</span>
+              <span class="pub-year">2025</span>
+              <span class="pub-status published">Published</span>
+            </div>
+          </div>
+          <div class="pub-card glass">
+            <h4>A Quantum-Enhanced Semantic Communication Framework for Securing Military Health IoT Data</h4>
+            <p class="pub-authors">A. Agrawal, R. Verma, A. Sinha</p>
+            <div class="pub-meta">
+              <span class="pub-venue">IEEE ICSC</span>
+              <span class="pub-year">2025</span>
+              <span class="pub-status published">Published</span>
+            </div>
+          </div>
+          <div class="pub-card glass">
+            <h4>Leveraging CSI of WiFi for Breath Estimation: An RNN-Based Rate Computation Using ESP32 Data</h4>
+            <p class="pub-authors">M. Sharma, A. Sinha, D. Das, R. Mahapatra</p>
+            <div class="pub-meta">
+              <span class="pub-venue">IEEE INDICON</span>
+              <span class="pub-year">2024</span>
+              <span class="pub-status published">Published</span>
+            </div>
+          </div>
+          <div class="pub-card glass">
+            <h4>AnDet: ML-Based Anomaly Detection of UEs in a Multi-cell B5G Mobile Network for Improved QoS</h4>
+            <p class="pub-authors">A. Sinha, A. Agrawal, S. Roy, V. Uduthalapally, D. Das, R. Mahapatra, S. Shetty</p>
+            <div class="pub-meta">
+              <span class="pub-venue">IEEE ICNC</span>
+              <span class="pub-year">2024</span>
+              <span class="pub-status published">Published</span>
+              <span class="pub-year">Cited by 1</span>
+            </div>
+          </div>
+          <div class="pub-card glass">
+            <h4>SDN-Based Seamless Mobility Management for B5G Services in High-Speed Railways</h4>
+            <p class="pub-authors">A. Sinha, V. Uduthalapally, D. Das, R. Mahapatra</p>
+            <div class="pub-meta">
+              <span class="pub-venue">IEEE ANTS</span>
+              <span class="pub-year">2023</span>
+              <span class="pub-status published">Published</span>
+              <span class="pub-year">Cited by 2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Patents -->
+      <div class="pub-category">
+        <div class="pub-category-header">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <h3>Patents</h3>
+        </div>
+        <div class="grid grid-2">
+          <div class="pub-card glass">
+            <h4>AI-Driven Post-Quantum Cryptographic Key Management System</h4>
+            <p class="pub-authors">S. Vollala, S. Mazumdar, S. Banerjee, S. N. Mishra, K. Sahu, A. Sinha</p>
+            <div class="pub-meta">
+              <span style="font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; color: var(--primary);">Application No. 202521028285</span>
+              <span class="pub-year">2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" class="scholar-link glass">
+          <span>View on Google Scholar</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section-padding skills-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Technical Expertise</span>
+        <h2 class="section-title">Skills & <span class="text-gradient">Technologies</span></h2>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="skill-card glass">
+          <div class="skill-icon cyan">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </div>
+          <h3 class="skill-title">Domain Knowledge</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">SDN</span>
+            <span class="skill-tag">OpenFlow</span>
+            <span class="skill-tag">5G/6G Concepts</span>
+            <span class="skill-tag">O-RAN</span>
+            <span class="skill-tag">B5G Networks</span>
+            <span class="skill-tag">Mobility Management</span>
+          </div>
+        </div>
+        
+        <div class="skill-card glass">
+          <div class="skill-icon purple">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 1 0 8 8"/><path d="M12 2v8l4 4"/></svg>
+          </div>
+          <h3 class="skill-title">AI/ML</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">Time Series Analysis</span>
+            <span class="skill-tag">Model Training</span>
+            <span class="skill-tag">Deep Learning</span>
+            <span class="skill-tag">Classification & Regression</span>
+          </div>
+        </div>
+        
+        <div class="skill-card glass">
+          <div class="skill-icon green">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="skill-title">Programming</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C/C++</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">HTML/CSS</span>
+          </div>
+        </div>
+        
+        <div class="skill-card glass">
+          <div class="skill-icon orange">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="skill-title">Developer Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">NetBeans</span>
+            <span class="skill-tag">Android Studio</span>
+            <span class="skill-tag">WHM/CPanel</span>
+            <span class="skill-tag">AWS Cloud</span>
+            <span class="skill-tag">Git</span>
+          </div>
+        </div>
+        
+        <div class="skill-card glass">
+          <div class="skill-icon blue">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <h3 class="skill-title">Technologies</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">WordPress</span>
+            <span class="skill-tag">Yii2</span>
+            <span class="skill-tag">Wireshark</span>
+            <span class="skill-tag">Docker</span>
+          </div>
+        </div>
+        
+        <div class="skill-card glass">
+          <div class="skill-icon red">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+          </div>
+          <h3 class="skill-title">Implementation</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Mininet-WiFi</span>
+            <span class="skill-tag">IEEE Innovation Testbed</span>
+            <span class="skill-tag">IoT</span>
+            <span class="skill-tag">UERANSIM</span>
+            <span class="skill-tag">NetSim</span>
+            <span class="skill-tag">ESP32</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaching Section -->
+  <section id="teaching" class="section-padding teaching-section">
+    <div class="container" style="position: relative; z-index: 10;">
+      <div class="section-header">
+        <span class="section-label">Academic Teaching</span>
+        <h2 class="section-title">Teaching <span class="text-gradient">Courses</span></h2>
+        <p class="section-description">
+          Delivering comprehensive courses across undergraduate and postgraduate programs, 
+          focusing on cutting-edge technologies and practical applications.
+        </p>
+      </div>
+      
+      <div class="teaching-tabs">
+        <div class="tab-buttons">
+          <button class="tab-btn active" onclick="switchTab('ug')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            Undergraduate
+          </button>
+          <button class="tab-btn" onclick="switchTab('pg')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            Postgraduate
+          </button>
+        </div>
+        
+        <div id="ug-content" class="tab-content active">
+          <div class="grid grid-2">
+            <div class="course-card glass">
+              <div class="course-card-inner">
+                <div class="card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </div>
+                <div>
+                  <span class="course-code">CS101</span>
+                  <h4 class="course-name">Introduction to Programming</h4>
+                  <p class="course-desc">Fundamentals of programming using Python and C</p>
+                </div>
+              </div>
+            </div>
+            <div class="course-card glass">
+              <div class="course-card-inner">
+                <div class="card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </div>
+                <div>
+                  <span class="course-code">CS201</span>
+                  <h4 class="course-name">Data Structures</h4>
+                  <p class="course-desc">Arrays, linked lists, trees, graphs, and algorithms</p>
+                </div>
+              </div>
+            </div>
+            <div class="course-card glass">
+              <div class="course-card-inner">
+                <div class="card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </div>
+                <div>
+                  <span class="course-code">CS301</span>
+                  <h4 class="course-name">Computer Networks</h4>
+                  <p class="course-desc">Network protocols, TCP/IP, and network architecture</p>
+                </div>
+              </div>
+            </div>
+            <div class="course-card glass">
+              <div class="course-card-inner">
+                <div class="card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </div>
+                <div>
+                  <span class="course-code">CS401</span>
+                  <h4 class="course-name">Operating Systems</h4>
+                  <p class="course-desc">Process management, memory management, and file systems</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="pg-content" class="tab-content">
+          <div class="grid grid-2">
+            <div class="course-card glass">
+              <div class="course-card-inner">
+                <div class="card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </div>
+                <div>
+                  <span class="course-code">CS601</span>
+                  <h4 class="course-name">Data Mining and Machine Learning</h4>
+                  <p class="course-desc">Pattern recognition, clustering, classification, and deep learning</p>
+                </div>
+              </div>
+            </div>
+            <div class="course-card glass">
+              <div class="course-card-inner">
+                <div class="card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </div>
+                <div>
+                  <span class="course-code">CS602</span>
+                  <h4 class="course-name">Software-Defined Networking</h4>
+                  <p class="course-desc">SDN architecture, OpenFlow, and network programmability</p>
+                </div>
+              </div>
+            </div>
+            <div class="course-card glass">
+              <div class="course-card-inner">
+                <div class="card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </div>
+                <div>
+                  <span class="course-code">CS603</span>
+                  <h4 class="course-name">ML for Communication Networks</h4>
+                  <p class="course-desc">AI-driven network optimization and intelligent handover decisions</p>
+                </div>
+              </div>
+            </div>
+            <div class="course-card glass">
+              <div class="course-card-inner">
+                <div class="card-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                </div>
+                <div>
+                  <span class="course-code">CS604</span>
+                  <h4 class="course-name">Advanced Wireless Networks</h4>
+                  <p class="course-desc">B5G/6G technologies, O-RAN, and next-gen communication systems</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Community Impact</span>
+        <h2 class="section-title">Leadership & <span class="text-gradient">Memberships</span></h2>
+      </div>
+      
+      <div class="grid grid-3" style="margin-bottom: 3rem;">
+        <div class="leadership-card glass">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="leadership-period">2024 – Present</span>
+          <h3 class="leadership-role">Student Branch Chair</h3>
+          <p class="leadership-org">IEEE Student Branch</p>
+          <p class="leadership-location">Dr. Shyama Prasad Mukherjee IIIT Naya Raipur</p>
+          <ul class="leadership-achievements">
+            <li>Organized 5+ technical workshops</li>
+            <li>Increased active membership by 40%</li>
+            <li>Managed executive committee of 5 members</li>
+          </ul>
+        </div>
+        
+        <div class="leadership-card glass">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <span class="leadership-period">2024 – 2025</span>
+          <h3 class="leadership-role">Post Graduate Representative</h3>
+          <p class="leadership-org">Students Activity Center (SAC)</p>
+          <p class="leadership-location">IIIT Naya Raipur</p>
+          <ul class="leadership-achievements">
+            <li>Represented 50+ PG students in institute council</li>
+            <li>Led initiatives improving research facilities</li>
+            <li>Enhanced student-faculty collaboration</li>
+          </ul>
+        </div>
+        
+        <div class="leadership-card glass">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <span class="leadership-period">2024 – 2025</span>
+          <h3 class="leadership-role">Ph.D. Student Member</h3>
+          <p class="leadership-org">Anti-Ragging Committee</p>
+          <p class="leadership-location">IIIT Naya Raipur</p>
+          <ul class="leadership-achievements">
+            <li>Facilitated awareness sessions for 300+ new entrants</li>
+            <li>Supported student welfare initiatives</li>
+            <li>Upheld anti-ragging regulations</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="memberships-card glass">
+        <h3>Professional Memberships</h3>
+        <div class="memberships-list">
+          <span class="membership-tag glass">Graduate Student Member, IEEE</span>
+          <span class="membership-tag glass">IEEE Young Professionals</span>
+          <span class="membership-tag glass">Student Member, ACM</span>
+          <span class="membership-tag glass">IEEE ComSoc</span>
+          <span class="membership-tag glass">IEEE Systems Council</span>
+          <span class="membership-tag glass">IEEE CTSoc</span>
+          <span class="membership-tag glass">IEEE Future Networks Community</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+        <p class="section-description">
+          Open to research collaborations, speaking opportunities, and discussions about B5G networks and AI/ML.
+        </p>
+      </div>
+      
+      <div class="contact-cards">
+        <div class="grid grid-3">
+          <div class="contact-card glass">
+            <div class="card-icon" style="margin: 0 auto 1rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3 class="contact-label">Email</h3>
+            <a href="mailto:amar@iiitnr.edu.in" class="contact-value">amar@iiitnr.edu.in</a>
+          </div>
+          
+          <div class="contact-card glass">
+            <div class="card-icon" style="margin: 0 auto 1rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h3 class="contact-label">Phone</h3>
+            <a href="tel:+917679496474" class="contact-value">+91-7679496474</a>
+          </div>
+          
+          <div class="contact-card glass">
+            <div class="card-icon" style="margin: 0 auto 1rem;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3 class="contact-label">Location</h3>
+            <p class="contact-value">IIIT Naya Raipur, Chhattisgarh, India</p>
+          </div>
+        </div>
+        
+        <div class="contact-social">
+          <a href="https://linkedin.com/in/amarcrj" target="_blank" class="contact-social-link glass" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://github.com/amarcrj" target="_blank" class="contact-social-link glass" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://www.amarsinha.in" target="_blank" class="contact-social-link glass" title="Website">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">© 2026 Amar Sinha. All rights reserved.</p>
+        <p class="footer-text">Designed with passion for research</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+      
+      if (mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        menuIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+      } else {
+        mobileMenu.classList.add('active');
+        menuIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
+      }
+    }
+
+    function closeMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+      mobileMenu.classList.remove('active');
+      menuIcon.style.display = 'block';
+      closeIcon.style.display = 'none';
+    }
+
+    // Theme toggle
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+      localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+    }
+
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light');
+    }
+
+    // Teaching tabs
+    function switchTab(tab) {
+      const ugContent = document.getElementById('ug-content');
+      const pgContent = document.getElementById('pg-content');
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      
+      tabBtns.forEach(btn => btn.classList.remove('active'));
+      
+      if (tab === 'ug') {
+        ugContent.classList.add('active');
+        pgContent.classList.remove('active');
+        tabBtns[0].classList.add('active');
+      } else {
+        ugContent.classList.remove('active');
+        pgContent.classList.add('active');
+        tabBtns[1].classList.add('active');
+      }
+    }
+  </script>
+</body>
 </html>

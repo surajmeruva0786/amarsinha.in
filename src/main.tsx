@@ -1,5 +1,2 @@
-import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
-
-createRoot(document.getElementById("root")!).render(<App />);
+// Minimal entry point - the actual content is in index.html
+console.log('Portfolio loaded');
