@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Globe, ChevronDown } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const socialLinks = [
   { icon: Mail, href: 'mailto:amar@iiitnr.edu.in', label: 'Email' },
@@ -34,6 +35,25 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* Profile Photo */}
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
+              className="mb-6"
+            >
+              <Avatar className="w-32 h-32 md:w-40 md:h-40 mx-auto ring-4 ring-primary/30 ring-offset-4 ring-offset-background shadow-glow">
+                <AvatarImage 
+                  src="/profile-photo.jpg" 
+                  alt="Amar Sinha" 
+                  className="object-cover"
+                />
+                <AvatarFallback className="text-3xl md:text-4xl font-bold bg-primary/10 text-primary">
+                  AS
+                </AvatarFallback>
+              </Avatar>
+            </motion.div>
+
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
