@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig({
-  base: "/",   // 🔥 MUST match repo name exactly
+  base: "/amarsinha.in/",   // 🔥 MUST match repo name exactly
   plugins: [react(), componentTagger()],
   resolve: {
     alias: {
