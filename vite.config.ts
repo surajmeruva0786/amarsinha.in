@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig({
-  base: "/",   // 👈 IMPORTANT FIX
+  base: "/amarsinha.in/",
   plugins: [react(), componentTagger()],
   resolve: {
     alias: {
