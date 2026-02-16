@@ -9,7 +9,22 @@ import { Leadership } from '@/components/Leadership';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+
 const Index = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname !== '/') {
+      const sectionId = location.pathname.substring(1); // remove leading slash
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />

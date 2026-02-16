@@ -17,7 +17,7 @@ export const About = () => {
   return (
     <section id="about" className="section-padding relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-glow opacity-30" />
-      
+
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -32,7 +32,7 @@ export const About = () => {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -41,18 +41,18 @@ export const About = () => {
             className="space-y-6"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm an innovative researcher with expertise in <span className="text-foreground font-medium">Beyond 5G (B5G)</span> mobile networks, 
-              <span className="text-foreground font-medium"> Software-Defined Networking (SDN)</span>, 
+              I'm an innovative researcher with expertise in <span className="text-foreground font-medium">Beyond 5G (B5G)</span> mobile networks,
+              <span className="text-foreground font-medium"> Software-Defined Networking (SDN)</span>,
               AI-driven handover decision-making algorithms, and wireless network simulations.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              With a proven track record in developing Mininet WiFi-based testbeds, applying learning models 
-              for mobility management, and enhancing overall network performance, I bridge the gap between 
+              With a proven track record in developing Mininet WiFi-based testbeds, applying learning models
+              for mobility management, and enhancing overall network performance, I bridge the gap between
               theoretical research and practical implementation.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Currently pursuing my <span className="text-foreground font-medium">Ph.D. at IIIT Naya Raipur</span>, 
-              I'm passionate about pushing the boundaries of next-generation wireless communication through 
+              Currently pursuing my <span className="text-foreground font-medium">Ph.D. at IIIT Naya Raipur</span>,
+              I'm passionate about pushing the boundaries of next-generation wireless communication through
               AI/ML-driven solutions.
             </p>
 

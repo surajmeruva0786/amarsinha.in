@@ -16,7 +16,7 @@ export const Hero = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-glow animate-glow-pulse" />
-      
+
       {/* Floating orbs */}
       <motion.div
         className="absolute top-20 right-20 w-72 h-72 rounded-full bg-primary/5 blur-3xl"
@@ -44,9 +44,9 @@ export const Hero = () => {
               className="mb-6"
             >
               <Avatar className="w-32 h-32 md:w-40 md:h-40 mx-auto ring-4 ring-primary/30 ring-offset-4 ring-offset-background shadow-glow">
-                <AvatarImage 
-                  src={profilePhoto} 
-                  alt="Amar Sinha" 
+                <AvatarImage
+                  src={profilePhoto}
+                  alt="Amar Sinha"
                   className="object-cover"
                 />
                 <AvatarFallback className="text-3xl md:text-4xl font-bold bg-primary/10 text-primary">
@@ -64,7 +64,7 @@ export const Hero = () => {
               Ph.D. Researcher • AI/ML Engineer
             </motion.div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight">
               Hi, I'm{' '}
               <span className="text-gradient">Amar Sinha</span>
             </h1>

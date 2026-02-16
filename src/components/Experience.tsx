@@ -80,7 +80,7 @@ export const Experience = () => {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
           {/* Work Experience */}
           <div>
             <motion.div
@@ -102,7 +102,7 @@ export const Experience = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                  className="relative pl-8 pb-8 border-l-2 border-border last:pb-0"
+                  className="relative pl-6 md:pl-8 pb-8 border-l-2 border-border last:pb-0"
                 >
                   <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] rounded-full bg-primary shadow-glow" />
                   <div className="p-6 rounded-2xl glass hover:shadow-card-hover transition-all duration-300">
@@ -145,7 +145,7 @@ export const Experience = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                  className="relative pl-8 pb-8 border-l-2 border-border last:pb-0"
+                  className="relative pl-6 md:pl-8 pb-8 border-l-2 border-border last:pb-0"
                 >
                   <div className="absolute left-0 top-0 w-4 h-4 -translate-x-[9px] rounded-full bg-secondary border-2 border-primary" />
                   <div className="p-6 rounded-2xl glass hover:shadow-card-hover transition-all duration-300">
